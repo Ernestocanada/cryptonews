@@ -3,8 +3,9 @@ import { Card, Row, Col, Select, Typography, Avatar } from "antd";
 import moment from "moment";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 import { useGetNewsQuery } from "../services/cryptoNewsApi";
-import { Link } from "react-router-dom";
+
 import bit from "../images/bit.jpg";
+import Loader from "./Loader";
 const { Text, Title } = Typography;
 const { Option } = Select;
 
@@ -20,7 +21,7 @@ const News = ({ simplified }) => {
     count,
   });
 
-  if (!crypNews?.value) return "Loading..... ";
+  if (!crypNews?.value) return <Loader />;
   return (
     <Row gutter={[24, 24]}>
       {!simplified && (

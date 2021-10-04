@@ -43,7 +43,15 @@ const App = () => {
             level={5}
             style={{ color: "white", textAlign: "center" }}
           >
-            Cryptonews <br /> All rights reserved
+            <a
+              href="https://www.linkedin.com/in/ernestodelapena/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Ernesto De La Pena{" "}
+            </a>{" "}
+            <br /> {new Date().getFullYear()} <br /> All rights reserved
           </Typography.Title>
           <Space>
             <Link to="/">Home</Link>
