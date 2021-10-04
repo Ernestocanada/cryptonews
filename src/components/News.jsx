@@ -20,8 +20,6 @@ const News = ({ simplified }) => {
     count,
   });
 
-  console.log(crypNews);
-
   if (!crypNews?.value) return "Loading..... ";
   return (
     <Row gutter={[24, 24]}>
